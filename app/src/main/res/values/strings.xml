@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">QuickFlickr</string>
+    <string name="action_settings">Settings</string>
+    <string name="photo_metadata">"Title: %1$s, Author: %2$s, Published: %3$s"</string>
 </resources>
