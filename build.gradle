@@ -12,6 +12,7 @@ buildscript {
         espressoCoreVersion = '3.0.2'
         jUnitVersion = '4.12'
         picassoVersion = '2.71828'
+        retrofitGsonVersion = '2.3.0'
     }
 
 

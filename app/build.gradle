@@ -27,7 +27,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.support_lib_version"
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.support_lib_version"
+
     implementation "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitGsonVersion"
 
     testImplementation "junit:junit:$rootProject.ext.jUnitVersion"
     testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
