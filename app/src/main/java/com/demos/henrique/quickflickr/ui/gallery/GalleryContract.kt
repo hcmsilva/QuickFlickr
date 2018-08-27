@@ -1,7 +1,7 @@
 package com.demos.henrique.quickflickr.ui.gallery
 
 import com.demos.henrique.quickflickr.model.FlickrFeed
-import com.demos.henrique.quickflickr.utils.FlickrApi
+import com.demos.henrique.quickflickr.utils.Networking.FlickrApi
 
 interface GalleryContract {
 
