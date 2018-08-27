@@ -40,4 +40,7 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.androidTestRunnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoCoreVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$rootProject.ext.espressoCoreVersion"
+    implementation ("com.android.support.test.espresso:espresso-idling-resource:$rootProject.ext.espressoCoreVersion") {
+        exclude module: 'support-annotations'
+    }
 }

@@ -3,6 +3,7 @@ package com.demos.henrique.quickflickr.utils.Networking;
 import com.demos.henrique.quickflickr.model.FlickrFeed;
 import com.demos.henrique.quickflickr.ui.gallery.GalleryContract;
 import com.demos.henrique.quickflickr.utils.DataContract;
+import com.demos.henrique.quickflickr.utils.EspressoTestingIdlingResource;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,17 +48,20 @@ public class FlickrApi implements DataContract
         Call<FlickrFeed> mCall = apiService.getFeed(1, "json");
 
 
+        EspressoTestingIdlingResource.increment();
         mCall.enqueue(new Callback<FlickrFeed>() {
             @Override
             public void onResponse(Call<FlickrFeed> call, Response<FlickrFeed> response)
             {
                 dataReceiver.updatePhotosList(response.body());
+                EspressoTestingIdlingResource.decrement();
             }
 
             @Override
             public void onFailure(Call<FlickrFeed> call, Throwable t)
             {
                 t.printStackTrace();
+                EspressoTestingIdlingResource.decrement();
             }
         });
 
