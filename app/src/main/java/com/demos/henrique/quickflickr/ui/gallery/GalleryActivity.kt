@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import com.demos.henrique.quickflickr.R
 import com.demos.henrique.quickflickr.model.FlickrFeed
 import com.demos.henrique.quickflickr.ui.custom.Listable
+import com.demos.henrique.quickflickr.utils.Networking.DataRepository
 import com.demos.henrique.quickflickr.utils.Networking.FlickrApi
 
 class GalleryActivity : AppCompatActivity(), GalleryContract.GalleryView
@@ -18,7 +19,8 @@ class GalleryActivity : AppCompatActivity(), GalleryContract.GalleryView
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
         setupViews()
-        mPresenter.getPhotosFromApi(FlickrApi(getString(R.string.flickr_base_url)))
+        //mPresenter.getPhotosFromApi(FlickrApi(getString(R.string.flickr_base_url)))
+        mPresenter.getPhotosFromApi(DataRepository.getDataRepository(getString(R.string.flickr_base_url)))
     }
 
     private fun setupViews() {

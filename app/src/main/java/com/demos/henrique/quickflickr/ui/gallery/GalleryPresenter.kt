@@ -1,6 +1,7 @@
 package com.demos.henrique.quickflickr.ui.gallery
 
 import com.demos.henrique.quickflickr.model.FlickrFeed
+import com.demos.henrique.quickflickr.utils.DataContract
 import com.demos.henrique.quickflickr.utils.Networking.FlickrApi
 
 class GalleryPresenter(mView: GalleryContract.GalleryView) : GalleryContract.GalleryPresenter
@@ -9,6 +10,6 @@ class GalleryPresenter(mView: GalleryContract.GalleryView) : GalleryContract.Gal
 
     override fun updatePhotosList(feed: FlickrFeed) = mView.showPhotoList(feed)
 
-    override fun getPhotosFromApi(api: FlickrApi) = api.getFlickrFeed(this)
+    override fun getPhotosFromApi(api: DataContract) = api.getFlickrFeed(this)
 
 }

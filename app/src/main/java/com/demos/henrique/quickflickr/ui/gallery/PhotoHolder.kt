@@ -34,7 +34,9 @@ class PhotoHolder(itemView: View) : MyBasicViewHolder(itemView)
                     Toast.LENGTH_LONG).show() }
 
         //possible improvement configurable
-        Picasso.get().load(photoUrl).resize(350,350).centerCrop().placeholder(R.mipmap.ic_launcher).into(thumb)
-
+        if(photoUrl.isNotBlank())
+            Picasso.get().load(photoUrl).resize(350,350).centerCrop().placeholder(R.mipmap.ic_launcher).into(thumb)
+        else
+            Picasso.get().load(R.mipmap.ic_launcher).resize(350,350).centerCrop().placeholder(R.mipmap.ic_launcher).into(thumb)
     }
 }
