@@ -4,11 +4,18 @@ class MetadataUtils
 {
     fun extractAuthor(rawAuthor: String): String
     {
-        return ""
+        val authorExtras1 = "nobody@flickr.com (\""
+        val authorExtras2 = "\")"
+
+        return rawAuthor.replace(authorExtras1, "")
+                .replace(authorExtras2,"")
     }
 
     fun extractTime(rawTime: String): String
     {
-        return ""
+        val regExSeconds = "(:[0-9][0-9]Z)"
+
+        return rawTime.replace("T",", ")
+                .replace(Regex(regExSeconds), "")
     }
 }
