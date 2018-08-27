@@ -29,6 +29,7 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.support_lib_version"
 
     implementation "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitGsonVersion"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitGsonVersion"
 
     testImplementation "junit:junit:$rootProject.ext.jUnitVersion"
