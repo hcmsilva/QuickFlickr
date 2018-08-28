@@ -1,5 +1,5 @@
 # QuickFlickr
-A proof-of-concept app that uses the **MVP design pattern**, **local Unit tests**, **Mockito** for unit test isolation and Instrumented tests using **Espresso**
+A proof-of-concept app written in **Kotlin** and **Java**, **MVP design pattern**, **local Unit tests**, **Mockito** for unit test isolation and Instrumented tests using **Espresso**
 
 
 - The app is organized *Feature-per-Package* 
