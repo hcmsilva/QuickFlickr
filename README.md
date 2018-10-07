@@ -15,7 +15,9 @@ Written 50/50 in **Kotlin** and **Java**, **MVP design pattern**, **local Unit t
 - There is a separate set of Instrumented tests performed using **Espresso**
 
 
-
+Architecture Pattern: **Model View Presenter (MVP)**
+- master branch using Dependency Injection *without* the use of external frameworks
+- dagger branch using **Dagger 2** for easy dependency injection (edit)
 
 
 Video Demos:
