@@ -13,6 +13,7 @@ buildscript {
         jUnitVersion = '4.12'
         picassoVersion = '2.71828'
         retrofitGsonVersion = '2.3.0'
+        dagger_version = '2.15'
     }
 
 
