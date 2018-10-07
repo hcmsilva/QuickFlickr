@@ -8,7 +8,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(GalleryPresenterModule::class, GalleryViewModule::class))
+@Component(dependencies = arrayOf(DataRepositoryComponent::class), modules = arrayOf(GalleryPresenterModule::class, GalleryViewModule::class))
 interface GalleryActivityComponent
 {
     fun inject(galleryActivity: GalleryActivity)
